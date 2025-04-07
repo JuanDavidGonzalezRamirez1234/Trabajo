@@ -24,11 +24,11 @@ class SistemaGestionEmpleados {
         while (!salir) {
             System.out.println("Menú:");
             System.out.println("1. Registrar Empleado de Planta");
-            System.out.println("2. Registrar Empleado por Horas");
+            System.out.println("2. Registrar Empleado por las Horas");
             System.out.println("3. Mostrar Salarios de Empleados");
-            System.out.println("4. Listar todos los Empleados");
+            System.out.println("4. Listas de todos los Empleados");
             System.out.println("5. Salir");
-            System.out.print("Seleccione una opción: ");
+            System.out.print("Seleccione una de las opciones: ");
             int opcion = scanner.nextInt();
             scanner.nextLine();
 
@@ -49,7 +49,7 @@ class SistemaGestionEmpleados {
                     salir = true;
                     break;
                 default:
-                    System.out.println("Opción no válida.");
+                    System.out.println("Opción erronea.");
             }
         }
     }
@@ -59,7 +59,7 @@ class SistemaGestionEmpleados {
         String nombre = scanner.nextLine();
         System.out.print("Ingrese edad: ");
         int edad = scanner.nextInt();
-        double salarioFijo = 2100000; // Salario fijo de 2.100.000
+        double salarioFijo = 2100000;
         Empleado empleado = new EmpleadoDePlanta(nombre, edad, salarioFijo);
         empleados.add(empleado);
         System.out.println("Empleado de Planta registrado exitosamente.");
@@ -70,11 +70,10 @@ class SistemaGestionEmpleados {
         String nombre = scanner.nextLine();
         System.out.print("Ingrese edad: ");
         int edad = scanner.nextInt();
-        System.out.print("Ingrese pago por hora: ");
-        double pagoPorHora = scanner.nextDouble();
-        System.out.print("Ingrese horas trabajadas: ");
+        System.out.print("Ingresa la horas ingresadas");
+        double pagoPorHorasalario = 98000;
         int horasTrabajadas = scanner.nextInt();
-        Empleado empleado = new EmpleadoPorHoras(nombre, edad, pagoPorHora, horasTrabajadas);
+        Empleado empleado = new EmpleadoPorHoras(nombre, edad, pagoPorHorasalario, horasTrabajadas);
         empleados.add(empleado);
         System.out.println("Empleado por Horas registrado exitosamente.");
     }

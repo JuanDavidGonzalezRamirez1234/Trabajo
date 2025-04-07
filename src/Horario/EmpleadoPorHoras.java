@@ -1,7 +1,7 @@
 package Horario;
 
 
-public class EmpleadoPorHoras extends Empleado {
+class EmpleadoPorHoras extends Empleado {
     private double pagoPorHora;
     private int horasTrabajadas;
 
@@ -14,6 +14,22 @@ public class EmpleadoPorHoras extends Empleado {
     @Override
     public double calcularSalario() {
         return pagoPorHora * horasTrabajadas;
+    }
+
+    public double getPagoPorHora() {
+        return pagoPorHora;
+    }
+
+    public void setPagoPorHora(double pagoPorHora) {
+        this.pagoPorHora = pagoPorHora;
+    }
+
+    public int getHorasTrabajadas() {
+        return horasTrabajadas;
+    }
+
+    public void setHorasTrabajadas(int horasTrabajadas) {
+        this.horasTrabajadas = horasTrabajadas;
     }
 
     @Override
